@@ -16,8 +16,8 @@ export class HomePage implements OnInit {
   longitude: number;
 
   constructor() {
-    this.longitude = 110.377364; // Longitude UGM
-    this.latitude = -7.770639;   // Latitude UGM
+    this.longitude = 110.37236063814555; 
+    this.latitude = -7.773672103725358;   
   }
 
   public async ngOnInit() {
@@ -33,13 +33,14 @@ export class HomePage implements OnInit {
       center: [this.longitude, this.latitude]
     });
 
-    // Buat marker di lokasi UGM
+    // Buat marker di lokasi sv
     const point = new Point({
       longitude: this.longitude,
       latitude: this.latitude
     });
 
     const markerSymbol = new SimpleMarkerSymbol({
+      style: 'diamond',
       color: [226, 119, 40],  // Warna marker
       outline: {
         color: [255, 255, 255], // Warna outline
