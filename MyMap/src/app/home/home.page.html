@@ -3,6 +3,17 @@
     <ion-title>
       Simple Map
     </ion-title>
+    
+    <!-- Dropdown di pojok kanan -->
+    <ion-buttons slot="end">
+     <ion-select class="dropdown-map" (ionChange)="onBasemapChange($event)" interface="popover" placeholder="Pilih basemap">
+        <ion-select-option value="topo-vector">Topographic</ion-select-option>
+        <ion-select-option value="streets">Streets</ion-select-option>
+        <ion-select-option value="satellite">Satellite</ion-select-option>
+        <ion-select-option value="hybrid">Hybrid</ion-select-option>
+        <ion-select-option value="terrain">Terrain</ion-select-option>
+      </ion-select>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
